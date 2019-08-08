@@ -62,7 +62,7 @@ __参数__
 - __horizontal_flip__: 布尔值。随机水平翻转。
 - __vertical_flip__: 布尔值。随机垂直翻转。
 - __rescale__: 重缩放因子。默认为 None。如果是 None 或 0，不进行缩放，否则将数据乘以所提供的值（在应用任何其他转换之前）。
-- __preprocessing_function__: 应用于每个输入的函数。这个函数会在任何其他改变之前运行。这个函数需要一个参数：一张图像（秩为 3 的 Numpy 张量），并且应该输出一个同尺寸的 Numpy 张量。
+- __preprocessing_function__: 应用于每个输入的函数。这个函数会在数据增强之后运行。这个函数需要一个参数：一张图像（秩为 3 的 Numpy 张量），并且应该输出一个同尺寸的 Numpy 张量。
 - __data_format__: 图像数据格式，{"channels_first", "channels_last"} 之一。"channels_last" 模式表示图像输入尺寸应该为 `(samples, height, width, channels)`，"channels_first" 模式表示输入尺寸应该为 `(samples, channels, height, width)`。默认为 在 Keras 配置文件 `~/.keras/keras.json` 中的 `image_data_format` 值。如果你从未设置它，那它就是 "channels_last"。
 - __validation_split__: 浮点数。Float. 保留用于验证的图像的比例（严格在0和1之间）。
 - __dtype__: 生成数组使用的数据类型。
